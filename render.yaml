@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: interview-quest-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm run backend:start
+    envVars:
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-flash-lite-latest
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
